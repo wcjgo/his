@@ -1,0 +1,32 @@
+spring:
+  mvc:
+    view:
+      suffix: .html
+      prefix: classpath:static/public/
+    static-path-pattern: /static/**
+  resources:
+    static-locations: classpath:/static/
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql:///his?serverTimezone=CST
+    username: root
+    password: root
+  jpa:
+    database: mysql
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  redis:
+    host: localhost
+    port: 6379
+server:
+  port: 8000
+
+
+
+
+
+
